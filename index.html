@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Movie Lab — TMDB: a Vue classroom project inspired by TMDB."><title>Movie Lab</title>  <script type="module" crossorigin src="/movielab2/assets/index-B6YaTRZT.js"></script>
+  <link rel="stylesheet" crossorigin href="/movielab2/assets/index-hl8ZBwsp.css">
+</head><body><div id="app"></div></body></html>
+<style scoped>
+* {
+  box-sizing: border-box;
+}
+
+:global(body) {
+  margin: 0;
+  background: #0b0b12;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+:global(#app) {
+  min-height: 100vh;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 25px;
+}
+
+/* Заголовок */
+h1 {
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #8b5cf6, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  margin-top: 40px;
+  font-size: 28px;
+}
+
+/* Форма поиска */
+form {
+  display: flex;
+  gap: 12px;
+  max-width: 650px;
+  margin: 30px auto;
+}
+
+input {
+  flex: 1;
+  padding: 14px 18px;
+  border: 1px solid #333344;
+  border-radius: 12px;
+  background: #171722;
+  color: white;
+  font-size: 16px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #8b5cf6;
+}
+
+button {
+  border: none;
+  border-radius: 12px;
+  padding: 12px 22px;
+  background: linear-gradient(135deg, #7c3aed, #db2777);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* Фильмы */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.movie-grid > * {
+  background: #161621;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #29293a;
+  transition: 0.25s;
+}
+
+.movie-grid > *:hover {
+  transform: translateY(-8px);
+  border-color: #8b5cf6;
+  box-shadow: 0 15px 35px rgba(124, 58, 237, 0.25);
+}
+
+/* Картинки */
+.movie-grid img {
+  width: 100%;
+  display: block;
+}
+
+/* Текст карточек */
+.movie-grid h3 {
+  font-size: 18px;
+  margin: 15px;
+}
+
+.movie-grid p {
+  color: #aaa;
+  margin: 15px;
+  line-height: 1.5;
+}
+
+/* Кнопки страниц */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 40px 0;
+}
+
+/* Телефон */
+@media (max-width: 600px) {
+  main {
+    padding: 25px 15px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  .movie-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+</style>
